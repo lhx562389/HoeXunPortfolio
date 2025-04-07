@@ -2,7 +2,7 @@
 import { lazy, Suspense } from "react";
 import LazyLoad from "react-lazyload";
 
-const Hero =lazy(() => import("./components/hero/hero"));
+const Hero =lazy(() => import("./components/hero/Hero"));
 const Services =lazy(() => import("./components/services/Services"));
 const Portfolio =lazy(() => import("./components/portfolio/Portfolio"));
 const Contact =lazy(() => import("./components/contact/Contact"));
