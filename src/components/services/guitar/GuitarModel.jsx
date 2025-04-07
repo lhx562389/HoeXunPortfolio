@@ -3,7 +3,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function GuitarModel(props) {
-  const { nodes, materials } = useGLTF('/public/dd_acoustic_guitar.glb')
+  const { nodes, materials } = useGLTF('/dd_acoustic_guitar.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[0, 345.938, -43.351]} rotation={[-0.356, 0.053, -0.159]} scale={100}>
@@ -20,4 +20,4 @@ export function GuitarModel(props) {
   )
 }
 
-useGLTF.preload('/public/dd_acoustic_guitar.glb')
+useGLTF.preload('/dd_acoustic_guitar.glb')
