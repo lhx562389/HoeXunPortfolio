@@ -1,0 +1,185 @@
+/* about.css */
+.aboutPage {
+   
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+  }
+  
+  .aboutTitle {
+    text-align: center;
+    font-size: 100px;
+    margin: 0 0 40px;
+    color: #D3876B;
+  }
+  
+  .aboutTitle span {
+    color: #4B3621;
+  }
+  
+  .section {
+    margin-bottom: 48px;
+  }
+  
+  .section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3d2b1f;
+    border-bottom: 2px solid #e0c4a3;
+    padding-bottom: 8px;
+  }
+  
+  .aboutCombinedSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .aboutLeft {
+    flex: 2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .aboutRight {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .aboutRight img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .aboutRight .caption {
+    font-size: 14px;
+    color: #6a4b34;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .skillGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  
+  .skillGrid div {
+    flex: 1;
+    min-width: 200px;
+    background: #fffaf4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .skillGrid h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4B3621;
+  }
+  
+  ul {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .educationEntry,
+  .volunteerEntry {
+    background: #fffaf4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 24px;
+    color: #4B3621;
+  }
+  
+  .awards {
+    width: 30%;
+    color: #4B3621;
+  }
+  
+  .awards p {
+    font-size: 14px;
+    color: #4B3621;
+    margin: 16px 0px;
+  }
+  
+  .awardList {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .awardList img {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 100%;
+  }
+  
+  /* New styles for image caption stacking */
+  .aboutRight .imageBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  
+  
+  .aboutRight .imageBlock img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .aboutRight .imageBlock .caption {
+    font-size: 14px;
+    color: #6a4b34;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .bubbleContainerAbout{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    justify-content: space-between;
+}
+.bubbleAbout{
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    color: #4B3621;
+    padding: 24px;
+    font-size: 18px;
+    border-radius: 20px 20px 0px 20px;
+
+}
+
+.bubbleContainerAbout img{
+    width: 60px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    background-color: #dd4c62;
+}

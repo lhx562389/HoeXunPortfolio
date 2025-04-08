@@ -59,8 +59,34 @@ const Hero = () => {
         animate="animate"
         className="awards"
       >
-        <motion.h2 variants={awardVariants}>Programming Languages</motion.h2>
-        <motion.p variants={awardVariants}> Python<br/> C <br/> Java <br/></motion.p>
+        <motion.h2 variants={awardVariants}>How I Think</motion.h2>
+        <motion.ul variants={awardVariants} className="thinkingList">
+          <li>
+            <div className="thinkingItem">
+              <span className="emoji">🧠</span>
+              <div>
+                <strong>Analytical Thinker</strong> — I love breaking down complex problems and turning ideas into systems.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="thinkingItem">
+              <span className="emoji">⚡</span>
+              <div>
+                <strong>Efficient Coder</strong> — I automate workflows to save time and reduce human error.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="thinkingItem">
+              <span className="emoji">🎯</span>
+              <div>
+                <strong>Purpose-Driven</strong> — I build tools that improve lives or solve real problems.
+              </div>
+            </div>
+          </li>
+        </motion.ul>
+
         <motion.div variants={awardVariants} className="awardList">
           <motion.img variants={awardVariants} src="/python.png" alt="" />
           <motion.img variants={awardVariants} src="/C.png" alt="" />

@@ -1,80 +1,76 @@
-/* Global */
+/* Global Reset */
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box; /* fixed from box-sizing: 0 */
 }
 
-/*main body*
-use google forms to choose font family and important the codes into html file*/ 
+/* === Global Font and Background === */
+/* You can import fonts from Google Fonts in your HTML like this:
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+   And update the font-family below accordingly
+*/
 
 body {
-    background: linear-gradient(to bottom, #12071f, #2f204e);
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #F1E4C3 0%, #E6D3B3 100%); /* Warm beige gradient */
+    color: #3d2b1f; /* Warm brown text */
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     min-height: 100vh;
 }
 
-/*adjusting scroll behaviour*/
-html{
+/* Smooth scrolling + snapping */
+html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
-/*anchor text*/
+/* Anchor link styles */
 a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
-/*padding gives empty space*/
-
+/* Central container */
 .container {
     max-width: 1536px;
     padding-left: 16px;
     padding-right: 16px;
-    margin-left:auto;
-    margin-right:auto;
-
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Setting the height for each section
-scroll-snap-allign makes sure that each scroll to next section aligns the page*/
+/* Scroll-snapped section sizing */
 section {
     height: 100vh;
     scroll-snap-align: center;
 }
 
-
-/* For creating responsive layouts,
-for smaller screen size, container will always be 540px */
-
-@media (min-width:640px){
+/* === Responsive Layout Breakpoints === */
+@media (min-width: 640px) {
     .container {
         max-width: 640px;
     }
 }
 
-@media (min-width:768px){
+@media (min-width: 768px) {
     .container {
         max-width: 768px;
     }
 }
 
-@media (min-width:1024px){
+@media (min-width: 1024px) {
     .container {
         max-width: 1024px;
     }
 }
 
-@media (min-width:1280px){
+@media (min-width: 1280px) {
     .container {
         max-width: 1280px;
     }
 }
 
-@media (min-width:1536px){
+@media (min-width: 1536px) {
     .container {
         max-width: 1536px;
     }
