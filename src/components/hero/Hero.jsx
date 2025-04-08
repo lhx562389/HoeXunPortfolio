@@ -59,12 +59,12 @@ const Hero = () => {
         animate="animate"
         className="awards"
       >
-        <motion.h2 variants={awardVariants}>Top Rated Designer</motion.h2>
-        <motion.p variants={awardVariants}> I love designing.</motion.p>
+        <motion.h2 variants={awardVariants}>Programming Languages</motion.h2>
+        <motion.p variants={awardVariants}> Python<br/> C <br/> Java <br/></motion.p>
         <motion.div variants={awardVariants} className="awardList">
-          <motion.img variants={awardVariants} src="/award1.png" alt="" />
-          <motion.img variants={awardVariants} src="/award2.png" alt="" />
-          <motion.img variants={awardVariants} src="/award3.png" alt="" />
+          <motion.img variants={awardVariants} src="/python.png" alt="" />
+          <motion.img variants={awardVariants} src="/C.png" alt="" />
+          <motion.img variants={awardVariants} src="/java.png" alt="" />
         </motion.div>
       </motion.div>
       {/*Scroll SVG */}
@@ -100,11 +100,11 @@ const Hero = () => {
         <motion.a variants={followVariants} href="/">
           <img src="/instagram.png" alt="" />
         </motion.a>
-        <motion.a variants={followVariants} href="/">
-          <img src="/youtube.png" alt="" />
+        <motion.a variants={followVariants} href="https://www.linkedin.com/in/laihoexun/">
+          <img src="/LinkedInIcon.png" alt="" />
         </motion.a>
-        <motion.a variants={followVariants} href="/">
-          <img src="/facebook.png" alt="" />
+        <motion.a variants={followVariants} href="https://github.com/lhx562389">
+          <img src="/GitHubIcon.png" alt="" />
         </motion.a>
         <motion.div variants={followVariants} className="followTextContainer">
           <div className="followText">Follow Me</div>
@@ -117,12 +117,12 @@ const Hero = () => {
       animate={{opacity:[0,1]}} 
       transition={{duration:1}}
       className="certificate">
-        <img src="/certificate.png" alt="" />
-        LMA CERTIFIED
+        <img src="/WSC.png" alt="" />
+        NTU WSC RSP, Friends of Children
         <br/>
-        Professional
+        22nd Main Committee
         <br/>
-        UI Designer
+        Chairperson
       </motion.div>
       {/* CONTACT BUTTON */}
       <motion.a href="/#contact" 
