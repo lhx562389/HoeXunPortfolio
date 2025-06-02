@@ -34,9 +34,9 @@ const App = () => {
       </Suspense>
 
       <Suspense fallback={"Loading..."}>
-        <LazyLoad once offset={100}>
+        <section>
           <AboutPage />
-        </LazyLoad>
+        </section>
       </Suspense>
 
       <Suspense fallback={"Loading..."}>

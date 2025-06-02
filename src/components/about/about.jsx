@@ -1,12 +1,22 @@
-// AboutPage.jsx
 import "./about.css";
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Speech from "./Speech";
 
 const AboutPage = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { margin: "-100px" });
+
+  // Prevent animation-triggered scroll on initial mount
+  const [triggerAnim, setTriggerAnim] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setTriggerAnim(true);
+    }, 500); // optional delay
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div className="aboutPage">
@@ -23,7 +33,7 @@ const AboutPage = () => {
         ref={sectionRef}
         className="section aboutCombinedSection"
         initial="initial"
-        animate={isInView ? "animate" : "initial"}
+        animate={isInView && triggerAnim ? "animate" : "initial"}
       >
         <motion.div
           className="aboutLeft"
@@ -37,9 +47,7 @@ const AboutPage = () => {
             <h3>Nanyang Technological University (NTU)</h3>
             <p>Bachelor of Engineering in Information Engineering and Media</p>
             <p>Expected Graduation: 2026</p>
-
             <br />
-
             <h3>Saint Andrew's Junior College (SAJC)</h3>
             <p>Cambridge A'Levels</p>
             <p>Graduated: 2019</p>
@@ -78,19 +86,18 @@ const AboutPage = () => {
           <h2>Volunteering Experiences</h2>
           <div className="volunteerEntry">
             <h3>Chairperson – NTU Welfare Service Club, Friends of Children</h3>
-            <p>2024 – 2025</p>
+            <p>Aug 2024 – Aug 2025</p>
             <p>
               Lead 350 volunteers across 15 centres. Oversaw event planning, budgeting, and welfare coordination.
             </p>
           </div>
-            <div className="volunteerEntry">
+          <div className="volunteerEntry">
             <h3>Centrehead – NTU Welfare Service Club, Friends of Children</h3>
-            <p>2023 – 2024</p>
+            <p>Aug 2023 – Aug 2024</p>
             <p>
               Lead 30 volunteers in Trampoline Club. Oversaw event planning, budgeting, and welfare coordination.
             </p>
           </div>
-          
         </motion.div>
 
         <motion.div
@@ -101,11 +108,11 @@ const AboutPage = () => {
           }}
         >
           <div className="imageBlock">
-            <img src="/Speech.JPG" alt="Community engagement session" />
+            <img src="/Speech.JPG" alt="Community engagement session" loading="lazy" />
             <Speech />
           </div>
           <div className="imageBlock">
-            <img src="/volunteeringphoto.jpg" alt="Volunteering activity" />
+            <img src="/volunteeringphoto.jpg" alt="Volunteering activity" loading="lazy" />
             <p className="caption">
               Annual December Event whereby we bring our service users to NTU for a day of fun-filled activity
             </p>

@@ -128,7 +128,7 @@ const Portfolio = () => {
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     const percent = v * 100;
-    setCurrentSection(percent < 50 ? "internship" : "coursework");
+    setCurrentSection(percent < 75 ? "internship" : "coursework");
     setShowLabel(v > 0.05 && v < 0.95);
   });
 

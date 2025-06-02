@@ -123,7 +123,7 @@ const Hero = () => {
       {/*Follow ,insert linkedin or ig */}
       <motion.div variants={followVariants}
        initial="initial" animate="animate" className="follow">
-        <motion.a variants={followVariants} href="/">
+        <motion.a variants={followVariants} href="https://www.instagram.com/hoexun/">
           <img src="/instagram.png" alt="" />
         </motion.a>
         <motion.a variants={followVariants} href="https://www.linkedin.com/in/laihoexun/">
