@@ -80,9 +80,17 @@ const AboutPage = () => {
             <h3>Chairperson – NTU Welfare Service Club, Friends of Children</h3>
             <p>2024 – 2025</p>
             <p>
-              Led 350 volunteers across 15 centres. Oversaw event planning, budgeting, and welfare coordination.
+              Lead 350 volunteers across 15 centres. Oversaw event planning, budgeting, and welfare coordination.
             </p>
           </div>
+            <div className="volunteerEntry">
+            <h3>Centrehead – NTU Welfare Service Club, Friends of Children</h3>
+            <p>2023 – 2024</p>
+            <p>
+              Lead 30 volunteers in Trampoline Club. Oversaw event planning, budgeting, and welfare coordination.
+            </p>
+          </div>
+          
         </motion.div>
 
         <motion.div

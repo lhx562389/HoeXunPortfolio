@@ -13,8 +13,8 @@ const internships = [
   {
     id: 2,
     img: "/cpf.jpg",
-    title: "CPF AI Gen Intern",
-    desc: "Made use of LLM such as...",
+    title: "CPF GenAI Intern",
+    desc: "Assisted with the development, testing, and implementation of GenAI solutions (primarily Gemini). Contributed in documentation, research and data management regarding the advancements of GenAI Technologies",
     link: "/",
   },
 ];
@@ -22,25 +22,25 @@ const internships = [
 const courseworks = [
   {
     id: 3,
-    img: "/p3.jpg",
-    title: "Course Project A",
-    desc: "Worked on...",
-    link: "/",
-  },
-  {
-    id: 4,
-    img: "/p4.jpg",
-    title: "Course Project B",
-    desc: "Worked on...",
-    link: "/",
-  },
-  {
-    id: 5,
     img: "/p5.jpg",
-    title: "Course Project C",
-    desc: "Worked on...",
+    title: "3D Animated Portfolio",
+    desc: "Worked on my own animated portfolio using Next.Js and React ",
     link: "/",
   },
+  // {
+  //   id: 4,
+  //   img: "/p4.jpg",
+  //   title: "Course Project B",
+  //   desc: "Worked on...",
+  //   link: "/",
+  // },
+  // {
+  //   id: 5,
+  //   img: "/p5.jpg",
+  //   title: "Course Project C",
+  //   desc: "Worked on...",
+  //   link: "/",
+  // },
 ];
 
 const imgVariants = {
