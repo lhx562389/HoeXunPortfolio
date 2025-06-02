@@ -1,78 +1,100 @@
-.contact{
-    height: 100%;
-    display: flex;
-    gap:100px;
+.contact {
+  height: 100%;
+  display: flex;
+  gap: 100px;
 }
 
-.cSection{
-    width: 50%;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.cSection {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form{
-    width: 80%;
-    display: flex;
+/* Make left side (form) bigger */
+.cSection:first-child {
+  width: 60%;
+}
+
+.cSection:last-child {
+  width: 40%;
+}
+
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea {
+  padding: 16px;               /* Bigger padding inside the box */
+  font-size: 16px;             /* Increases the text size */
+  width: 150%;                 /* Makes inputs span full width of container */
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;      /* Ensures padding doesn't overflow container */
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 20px;
+}
+
+.formButton {
+  background-color: #dd4c62;
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: max-content;
+  font-size: 20px;
+}
+
+/* Success/Error message placement */
+form span {
+  margin-top: 10px;
+  display: inline-block;
+  color: #4b3621;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
     flex-direction: column;
-    gap: 20px;
-}
+  }
 
-input, textarea{
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-}
+  .cSection {
+    width: 100%;
+  }
 
-.formItem{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+  .cSection:first-child {
+    height: 70%;
+  }
 
-label{
-    font-size: 13px;
-}
-
-.formButton{
-    background-color: #dd4c62;
-    color: white;
-    padding:20px;
-    border:none;
-    border-radius: 10px;
-    cursor: pointer;
-
-
-}
-
-@media (max-width: 1280px){
-    .form{
-       width: 10%;
-    }
-
-}
-
-@media (max-width: 1024px){
-    .contact{
-        gap: 30px;
-    }
-
-}
-
-@media (max-width: 768px){
-    .contact{
-        flex-direction: column;
-    }
-    .cSection{
-        width: 100%;
-    }
-    .cSection:first-child{
-        height: 70%;
-    }
-    .cSection:last-child{
-        height: 30%;
-    }
-
+  .cSection:last-child {
+    height: 30%;
+  }
 }

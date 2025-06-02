@@ -1,46 +1,67 @@
-
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useRef } from "react";
 import LazyLoad from "react-lazyload";
 
-const Hero =lazy(() => import("./components/hero/Hero"));
-const Services =lazy(() => import("./components/services/Services"));
-const Portfolio =lazy(() => import("./components/portfolio/Portfolio"));
-const Contact =lazy(() => import("./components/contact/Contact"));
-/*initiate different sections*/
-/*use lazy loading to import the pages only at the prev page -> faster loading */
+const Hero = lazy(() => import("./components/hero/Hero"));
+const Services = lazy(() => import("./components/services/Services"));
+const Portfolio = lazy(() => import("./components/portfolio/Portfolio"));
+const Contact = lazy(() => import("./components/contact/Contact"));
+import AboutPage from "./components/about/about";
 
 const App = () => {
+  const homeRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="container">
-      <Suspense fallback={"loading..."}>
-      <LazyLoad height ={"100vh"} offset={-100}>
-      <section id="#home">
-        <Hero />
-      </section>
-      </LazyLoad>
+      {/* Sample navigation buttons */}
+      <div className="fixed top-4 right-4 z-50 space-x-4">
+        <button onClick={() => scrollToSection(homeRef)} className="bg-purple-200 px-4 py-2 rounded">Home</button>
+        <button onClick={() => scrollToSection(servicesRef)} className="bg-purple-200 px-4 py-2 rounded">Services</button>
+        <button onClick={() => scrollToSection(contactRef)} className="bg-purple-200 px-4 py-2 rounded">Contact</button>
+      </div>
+
+      <Suspense fallback={"Loading..."}>
+        <LazyLoad once offset={100}>
+          <section ref={homeRef}>
+            <Hero />
+          </section>
+        </LazyLoad>
       </Suspense>
-      <Suspense fallback={"loading..."}>
-      <LazyLoad height ={"100vh"} offset={-100}>
-      <section id="#services">
-        <Services />
-      </section>
-      </LazyLoad>
+
+      <Suspense fallback={"Loading..."}>
+        <LazyLoad once offset={100}>
+          <AboutPage />
+        </LazyLoad>
       </Suspense>
-      <Suspense fallback={"loading..."}>
-      <LazyLoad height ={"600vh"} offset={-100}>
-      {/*section id="#portfolio"*/}
-        <Portfolio />
-      {/*section is removed as there is already section in portfolio*/} 
-      </LazyLoad>
+
+      <Suspense fallback={"Loading..."}>
+        <LazyLoad once offset={200}>
+          <Portfolio />
+        </LazyLoad>
       </Suspense>
-      <Suspense fallback={"loading..."}>
-      <LazyLoad height ={"100vh"} offset={-100}>
-      <section id="#contact">
-      < Contact />
-      </section>
-      </LazyLoad>
+
+      <Suspense fallback={"Loading..."}>
+        <LazyLoad once offset={100}>
+          <section ref={servicesRef}>
+            <Services />
+          </section>
+        </LazyLoad>
+      </Suspense>
+
+      <Suspense fallback={"Loading..."}>
+        <LazyLoad once offset={100}>
+          <section ref={contactRef}>
+            <Contact />
+          </section>
+        </LazyLoad>
       </Suspense>
     </div>
   );
 };
-export default App
+
+export default App;
